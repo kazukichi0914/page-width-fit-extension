@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ページ幅フィット",
+  "version": "1.0.0",
+  "description": "表示中のページの横幅がスクロールせずに収まるよう自動で縮小表示します。ポップアップから自動オン/オフを切り替えられます。",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ページ幅フィット"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
